@@ -1,0 +1,22 @@
+Online ebook :
+
+User ==>
+
+signin
+------------
+{
+    fullname: "",
+    phone: "",
+    email: "",
+    password: "",
+}	
+login
+logout
+
+
+wishlist
+add-to-cart
+purchase
+
+
+order_history
