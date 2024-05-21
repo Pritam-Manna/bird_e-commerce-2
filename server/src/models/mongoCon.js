@@ -31,4 +31,24 @@ module.exports = class MongoCon{
             return res;
         }
     }
+
+    async login(data, encPass){
+        let query = {email: data.email, password: encPass};
+        
+        let res;
+        try{
+            let queryRes =  await this.mongoClient.db(this.db).collection(this.userCol).countDocuments(query);
+            res = {
+                error: false,
+                res: queryRes
+            }
+            return res;
+        }catch(e){
+            res = {
+                error: true,
+                res: e
+            }
+            return res;
+        }
+    }
 }
